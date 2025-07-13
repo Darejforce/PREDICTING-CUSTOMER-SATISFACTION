@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Satisfaction Prediction</title>
+</head>
+<body>
+    <h2>Enter Customer Info</h2>
+    <form action="/predict" method="post">
+        <label>Total Spend:</label><br>
+        <input type="number" name="total_spend" step="0.01" required><br><br>
+
+        <label>Items Purchased:</label><br>
+        <input type="number" name="items_purchased" required><br><br>
+
+        <label>Average Rating:</label><br>
+        <input type="number" name="average_rating" step="0.1" required><br><br>
+
+        <label>Days Since Last Purchase:</label><br>
+        <input type="number" name="days_since_last_purchase" required><br><br>
+
+        <label>Discount Applied:</label><br>
+        <input type="number" name="discount_applied" step="0.01" required><br><br>
+
+        <label>Gender:</label><br>
+        <select name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+
+        <label>Membership Level:</label><br>
+        <select name="membership" required>
+            <option value="Silver">Silver</option>
+            <option value="Gold">Gold</option>
+            <option value="Platinum">Platinum</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
